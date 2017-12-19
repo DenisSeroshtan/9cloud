@@ -1,0 +1,29 @@
+//color
+$accent: #E84C3D;
+
+$grey: #2C3039;
+$white: #fff;
+$color-link: #fff;
+$btn_grey: #e84c3d;
+
+
+$fontawesome_path: '../fonts/fontawesome';
+
+
+
+//common style
+@import "_misc/mixins";
+@import "_misc/fonts";
+@import "_misc/smartgrid";
+@import "_misc/adjustment";
+@import "_misc/font-awesome";
+
+// animation
+//@import "_misc/preloader";
+//@import "common/hamburger";
+//@import "common/popup";
+
+
+//section
+@import "common/header";
+

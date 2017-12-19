@@ -1,0 +1,65 @@
+.header {
+	@include bg-cover("../img/header_bg.jpg")
+}
+//-_-_-_-_-_-_-_-_-_-_-_-_-/header-top/_-_-_-_-_-_-_-_-_-_-_-_-//
+
+.header-top__wrap {
+	width: 100%;
+	border-bottom: 1px solid #424348;
+}
+.header-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: rem(30px) 0;
+}
+.logo__container {
+
+}
+.logo__wrap {
+	@include inline-block(middle);
+	max-height:rem(40px);
+	max-width: rem(60px);
+	margin-right: rem(20px);
+}
+.logo__title {
+	@include inline-block(middle);
+	text-transform: uppercase;
+	white-space: nowrap;
+	@include font-family(bold);
+	font-size: 16px;
+	span {
+		color: $accent;
+	}
+}
+.nav {
+
+}
+.nav__item {
+	@include inline-block(middle);
+	&.active {
+		a {
+			color: $accent;
+		}
+	}
+}
+.nav__item-link {
+	display: block;
+	padding: rem(15px);
+	@extend %small-link;
+	@extend %transition;
+	&:hover {
+		color: $accent;
+	}
+}
+.btn__login {
+	display: inline-block;
+	padding: rem(15px) rem(30px);
+	border: 1px solid $accent;
+	@extend %small-link;
+	@extend %transition;
+
+	&:hover {
+		background: $accent;
+	}
+}

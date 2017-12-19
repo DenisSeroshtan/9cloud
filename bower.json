@@ -1,0 +1,22 @@
+{
+  "name": "nine_clouds",
+  "description": "desc",
+  "main": "gulpfile.js",
+  "authors": [
+    "DenisSeroshtan"
+  ],
+  "license": "MIT",
+  "homepage": "denisser-web.ru",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jQuery": "https://github.com/jquery/jquery.git#^3.2.1",
+    "normalize-css": "https://github.com/necolas/normalize.css.git#^7.0.0"
+  }
+}

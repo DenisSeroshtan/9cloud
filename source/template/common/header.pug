@@ -1,0 +1,23 @@
+//-_-_-_-_-_-_-_-_-_-_-_-_-/header/_-_-_-_-_-_-_-_-_-_-_-_-//
+header.header
+	.header-top__wrap
+		.container
+			.header-top
+				a(href="/").logo__container
+					.logo__wrap
+						img(src="assets/img/logo.svg"
+							alt="logo" class="logo__img")
+					.logo__title.js-lastWord nine cloud hosting
+				nav.nav
+					ul.nav__list
+						-for (let i = 0; i<nav.length; i++)
+							li(class="nav__item "+((i == 0) ? "active" : ""))
+								a(href=`#js-${nav[i]}` class="nav__item-link")= nav[i]
+				a(href="#" class="btn__login") login
+	.container
+		.header-mid
+			h1.header-mid__title= headerText.title
+			.header-mid__desc
+				p= headerText.desc
+			+Btn("get started")
+			a(href="#" class="header-mid__link") learn more

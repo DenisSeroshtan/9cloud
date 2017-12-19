@@ -1,0 +1,145 @@
+@mixin default-font {
+	font-family: pt_sansregular, sans-serif;
+	color: #000;
+	font-size: rem(14px);
+}
+//style
+html{
+	@include reset; //reset style of smartgrid
+	box-sizing: border-box;
+	font-size: 16px;
+	@include md-block {
+		font-size: 15px;
+	}
+
+	@include sm-block {
+		font-size: 15px;
+	}
+
+	@include xs-block {
+		font-size: 14px;
+	}
+
+}
+
+html {
+	width: 100%;
+	min-height: 100%;
+}
+
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+
+body {
+	min-height: 100%;
+	@include default-font;
+	line-height: 1.4;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	position: relative;
+	min-width: 320px;
+}
+
+section {
+	width: 100%;
+}
+
+.container{
+	@include wrapper;
+}
+
+li {
+	list-style: none;
+}
+
+ul, p {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: $color-link;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.4;
+	font-weight: normal;
+	margin: 0;
+}
+
+.h2 {
+	@include font-family(roblight);
+	color: #000;
+	font-size: rem(40px);
+	line-height: 2;
+}
+.h3 {
+	text-transform: uppercase;
+}
+.btn {
+	display: inline-block;
+	background: $accent;
+	padding: rem(20px) rem(65px);
+	text-transform: uppercase;
+	white-space: nowrap;
+	color: $white;
+	&:hover {
+		background: #e12c1b;
+	}
+	&.btn_grey {
+		background: $grey;
+
+		&:hover {
+			background: #3e4350;
+		}
+	}
+}
+//reset input
+input,
+label,
+select,
+button,
+textarea
+{
+	margin:0;
+	border:0;
+	padding:0;
+	display:inline-block;
+	vertical-align:middle;
+	white-space:normal;
+	background:none;
+	line-height:1;
+	font-size:13px;
+	@include default-font;
+
+}
+
+button {
+	cursor: pointer;
+}
+
+button:focus, input:focus, select:focus {
+	outline:0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+td,
+th {
+	padding: 0
+}
+

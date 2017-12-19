@@ -1,0 +1,123 @@
+mixin preloader
+	.preloader
+		.pulse
+
+mixin headerTop(mod="")
+	.container
+		div(class='header-top '+mod)
+			.header-top__wrap
+				a(href="#" class="logo__link")
+					+svg("logo__svg","logo")
+				if (mod == "footer")
+					+nav("nav", "Главная", "menu-footer")
+				else
+					+nav("nav", "Главная", "menu")
+				.phone-number +7 (495) 00-99-56
+
+mixin workList
+	ul.work__list
+		-var k = 1
+		each value, key in workList
+			if (key == "human")
+				li.work__item
+					.work__item-wrap
+						+svg("work__icon-svg", key)
+						span.work__item-num= k+"."
+						.work__item-text
+							| #{value}
+					+firstArrSvg
+			else
+				li.work__item
+					-var num = ++k
+					.work__item-wrap
+						+svg("work__icon-svg", key)
+						span.work__item-num= num+"."
+						.work__item-text
+							| #{value}
+					+arrSvg(num)
+mixin form(mod= '')
+	form(class = "form " + mod)
+		if (mod == "about")
+			.form__title= form.titleFooter
+		else
+			.form__title= form.title
+		.form__text
+			p= form.text
+		label(class="label")
+			span.label__text Ваше имя:
+			input(name="name" type="text").input
+		label(class="label")
+			span.label__text Ваш телефон:
+			input(name="phone" type="text").input
+		.btn__wrap
+			+Btn("Отправить")
+
+mixin svg(className = '', id)
+	svg(class= className)
+		use(xlink:href=`assets/svg/sprite.svg#${id}`)
+
+mixin hamburger(link)
+	a(href="#"+link).hamburger.hamburger--elastic
+		span.hamburger-box
+			span.hamburger-inner
+
+mixin nav(className, activeItem, id,  mod= "")
+	nav(class= className)
+		+hamburger(id)
+		ul(class= className + "__list" + mod id=id)
+			each link, key in nav
+				li(class=className+'__item' + ( (key == activeItem) ?  ' '+'active' : '')+ mod)
+					a(href="#js-"+link class=className+"__link "+mod)= key
+
+
+mixin Btn (titleText, mod = "")
+	if (titleText == "Отправить")
+		button(class= "btn" type="button") #{titleText}
+	else
+		a(href="#" class="btn " + mod) #{titleText}
+
+mixin sectionTop(title, desc = '', mod = '')
+	.section__top
+		.container
+			.top__row
+				if (title == "как мы работаем")
+					h2(class="top__title "+ mod) #{title}
+				else
+					h2(class="top__title "+ mod) #{title}
+					div(class="top__desc "+ mod)
+						p !{desc}
+
+mixin Top(sectionName)
+	section(class="section "+ sectionName id = "#js-"+ sectionName)
+		+sectionTop(secTitle[sectionName], desc[sectionName])
+
+mixin ratingList(obj, mod = "")
+	.container
+		ul(class= "rating__list " + mod)
+			each val, key in obj
+				li(class="rating__item " + mod)
+					if (key === "")
+						.content__item_wrap
+							+svg("account__svg", "book")
+					else
+						a(href= val["link"] class="item__link " + mod)= key
+						div(class="item__text " + mod )
+							p= val["text"]
+
+mixin sectionBottom(btnText, mod = "")
+	div(class= "section__bottom " + mod id="js-btn_"+mod)
+		+Btn(btnText)
+
+mixin debug
+	.debug
+		div
+			div
+				- for (var i = 1; i <= 12; i++)
+					div
+
+mixin formHidden(email, name="site", text="Заявка с сайта")
+	// hidden required fields
+	input(name="project_name" type="hidden" value= name)
+	input(name="admin_email" type="hidden" value= email)
+	input(name="form_subject" type="hidden" value= text)
+	// end hidden required fields

@@ -1,0 +1,41 @@
+include common/_mixins
+block variables
+
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title #{title}
+		meta(content="" name="author")
+		meta(content="" name="description")
+		meta(content="" name="keywords")
+		meta(content="width=device-width, initial-scale=1" name="viewport" maximum-scale=1)
+		meta(content="ie=edge" http-equiv="x-ua-compatible")
+		//- favicon block start
+		include common/favicon
+		//- favicon block end
+		//- Chrome, Firefox OS and Opera
+		meta(name="theme-color" content= colorBrowser)
+		//- Windows Phone
+		meta(name="msapplication-navbutton-color" content= colorBrowser)
+		//- iOS Safari
+		meta(name="apple-mobile-web-app-status-bar-style" content= colorBrowser)
+
+
+
+	body
+
+		.wrapper
+			//+preloader
+			//a(href="#js-header").top
+			//-_-_-_-_-_-_-_-_-_-_-_-_-/content/_-_-_-_-_-_-_-_-_-_-_-_-//
+			block content
+		//-_-_-_-_-_-_-_-_-_-_-_-_-/style and scripts/_-_-_-_-_-_-_-_-_-_-_-_-//
+
+		link(rel='stylesheet' href='assets/css/foundation.css')
+		link(rel='stylesheet' href='assets/css/app.css')
+		script(src='assets/js/svg4everybody.min.js')
+		script(src='assets/js/foundation.js')
+		script(src='assets/js/app.js')
+		script svg4everybody();
+
