@@ -1,5 +1,6 @@
 .header {
-	@include bg-cover("../img/header_bg.jpg")
+	@include bg-cover("../img/header_bg.jpg");
+	color: #fff;
 }
 //-_-_-_-_-_-_-_-_-_-_-_-_-/header-top/_-_-_-_-_-_-_-_-_-_-_-_-//
 
@@ -63,3 +64,17 @@
 		background: $accent;
 	}
 }
+//-_-_-_-_-_-_-_-_-_-_-_-_-/header-mid/_-_-_-_-_-_-_-_-_-_-_-_-//
+	.header-mid {
+		text-align: center;
+	}
+	.header-mid__title {
+		@include font-family(robthin);
+		font-size: rem(40px);
+		line-height: 1;
+	}
+	.header-mid__desc {
+		font-size: rem(16px);
+		max-width: rem(500px);
+		display: inline-block;
+	}
