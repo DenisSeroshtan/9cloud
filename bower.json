@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "jQuery": "https://github.com/jquery/jquery.git#^3.2.1",
-    "normalize-css": "https://github.com/necolas/normalize.css.git#^7.0.0"
+    "normalize-css": "https://github.com/necolas/normalize.css.git#^7.0.0",
+    "sumoselect": "^3.0.2"
   }
 }

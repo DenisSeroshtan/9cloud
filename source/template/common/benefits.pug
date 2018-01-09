@@ -1,0 +1,13 @@
+section.section.benefits
+	.container
+		ul.benefits__list
+			each obj, key in benefits
+				li.benefits__item
+					.benefits__item-wrap
+						div(class=`benefits__item-sprite ${key}`)
+						h3.benefits__item-title= obj.title
+						.benefits__item-desc
+							p= obj.desc
+						.benefits__item-wrap_link
+							a(href=`${obj.link}` class="header-mid__link link__red") read more
+

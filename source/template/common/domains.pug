@@ -1,0 +1,26 @@
+section.section.domain#js-domain
+	.container
+		.domain__row
+			.domain__col
+				h2.domain__title Search Domain
+				.domain__desc
+					p= domain.desc
+
+				form.domain__form#js-domain__form
+
+					input(name="search_domain"
+						type="text"
+						placeholder="http://").domain__input
+					select(name="select_domain_name").domain__select#js-select
+						option .com
+						option .net
+						option .biz
+					button.btn.domain__btn find domain
+		ul.domain__list
+			each obj, key in domain.list
+				li.domain__item
+					+svg("domains__item-icon", key)
+					.domain__item-title= obj.title
+					.domain__item-text
+						p= obj.text
+

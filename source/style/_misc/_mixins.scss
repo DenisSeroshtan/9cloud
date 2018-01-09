@@ -1,6 +1,7 @@
 %transition {
 	transition: all .25s ease;
 }
+
 %small-link {
 	text-transform: uppercase;
 	font-size: 12px;
@@ -10,10 +11,12 @@
 @function rem($px){
 	@return $px/16px+0rem;
 }
+
 @mixin font($size:16px, $color:#333){
 	font-size: rem($size);
 	color: $color;
 }
+
 @mixin inline-block($valign:top){
 	display: inline-block;
 	vertical-align: $valign;
@@ -23,13 +26,14 @@
 	background: $default url($url) no-repeat top center;
 	background-size: cover;
 }
-@mixin cover($color: $grey){
+
+@mixin cover($color: $grey) {
 	background-color: $color;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-
 }
+
 @mixin absolute-center {
 	top: 0;
 	left: 0;
@@ -45,7 +49,6 @@
 		content: "";
 		display: table;
 	}
-
 	&:after {
 		clear: both;
 	}

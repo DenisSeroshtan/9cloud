@@ -2,8 +2,41 @@
 {
   "nav" : ["hosting", "domains", "features", "plans", "testimonials", "contacts"],
   "headerText" : {
-    "title" : "Strength in equality. The power oft dreams",
+    "title" : "Strength in equality. The power of dreams",
     "desc" : "Web hosting for $9.95/mo $2.95/mo. Sign up today and also get a free 1-on-1 consultation to help you get started."
+  },
+  "domain" : {
+    "desc" : "Save big on domain options like .com, .co, .biz, .net, .org and grab new domains like .xyz,.club, .guru, .email, .link, .today, and more!",
+    "list" : {
+      "find" : {
+        "title" : "find domain",
+        "text" : "Etiam efficitur, risus sit amet sodales laoreet, sem mauris interdum lectus, nec luctus est."
+      },
+      "choose" : {
+        "title" : "choose a plan",
+        "text" : "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia."
+      },
+      "build" : {
+        "title" : "build your website",
+        "text" : "Curabitur imperdiet enim id faucibus sollicitudin."
+      }
+    }
+  },
+  "benefits" : {
+    "shell": {
+      "title": "99,9% uptime guarantee",
+      "desc": "Disk space in all packages has been increased by ten times!",
+      "link": "#"
+    },
+    "services": {
+      "title": "managed services",
+      "desc": "Leave the set up, management and monitoring to us. ",
+      "link": "#"
+    },
+    "cloud": {
+      "title": "cloud services",
+      "desc": "Reliable, high-performance cloud that meets your changing business demands.",
+      "link": "#"
+    }
   }
-
 }

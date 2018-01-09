@@ -1,0 +1,125 @@
+.section.domain {
+	background: $white;
+	padding: rem(35px) 0 rem(55px);
+}
+.domain__row {
+	@include row-flex;
+	justify-content: center;
+}
+.domain__col {
+	@include col-padding;
+	@include size(8);
+	@include size-lg(10);
+	@include size-md(12);
+	text-align: center;
+}
+.domain__title {
+	@include font-family(roblight);
+	font-size: rem(40px);
+	margin-bottom: rem(15px);
+}
+.domain__desc {
+	font-size: 1rem;
+	margin-bottom: rem(30px);
+}
+.domain__form {
+	display: flex;
+	padding: rem(10px);
+
+	background: #973b48;
+	background: linear-gradient(to right, #973b48 0%,#36334d 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#973b48', endColorstr='#36334d',GradientType=1 );
+
+	margin-bottom: rem(40px);
+}
+
+.domain__input {
+	flex-grow: 1;
+	min-width: rem(20px);
+	background: #fff;
+	font-size: 1rem;
+	padding: rem(17px) rem(15px) rem(13px);
+	&:focus {
+		box-shadow: 0 0 5px #e8dc45;
+	}
+	&::placeholder {
+		color: #000;
+	}
+}
+.domain__select {
+	background: #fff;
+	font-size: 1rem;
+	&:focus {
+		box-shadow: 0 0 5px #e8dc45;
+	}
+}
+.domain__btn {
+	font-size: rem(14px);
+	@include font-family(bold);
+	padding: 0 rem(25px);
+	@include sm-block{
+		padding: 0 rem(10px);
+	}
+}
+.domain__list {
+	@include row-flex;
+}
+.domain__item {
+	position: relative;
+	@include col;
+	@include size(3);
+	@include size-md(8);
+	@include size-xs(10);
+	@include shift-left(1);
+	@include md-block {
+		@include shift(2);
+		margin-bottom: rem(20px);
+	}
+	@include xs-block {
+		@include shift(1);
+
+	}
+
+
+}
+.domain__item-title {
+	font-size: rem(14px);
+	@include font-family(bold);
+	text-transform: uppercase;
+}
+.domain__item-text {
+	color: #5e5e5e;
+}
+.domains__item-icon {
+	position: absolute;
+	left: rem(-60px);
+
+	width:rem(30px);
+	height: rem(30px);
+
+	fill: #5e5e5e;
+	@include sm-block{
+		left: rem(-40px);
+	}
+}
+
+//-_-_-_-_-_-_-_-_-_-_-_-_-/select/_-_-_-_-_-_-_-_-_-_-_-_-//
+.SumoSelect>.CaptionCont {
+	border-radius:0;
+	border: none;
+}
+.SumoSelect {
+	width: auto;
+	font-size: 1rem;
+}
+.SumoSelect>.CaptionCont {
+	min-height: 50px;
+}
+.SumoSelect>.CaptionCont>span {
+	padding-top: rem(11px);
+	padding-right: rem(25px);
+}
+.SumoSelect.open>.CaptionCont, .SumoSelect:focus>.CaptionCont, .SumoSelect:hover>.CaptionCont {
+	box-shadow: none;
+	border-color: transparent;
+}

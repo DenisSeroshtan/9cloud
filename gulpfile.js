@@ -31,7 +31,8 @@ $.gulp.task('default', $.gulp.series(
         'js:transit',
         'images',
         'fonts',
-        'sprite:svg'
+        'sprite:svg',
+        'svgImg'
     ),
     $.gulp.parallel(
         'watch',

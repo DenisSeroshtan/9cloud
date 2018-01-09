@@ -15,16 +15,15 @@
 	padding: rem(30px) 0;
 }
 .logo__container {
-
+	display: flex;
+	align-items: center;
 }
 .logo__wrap {
-	@include inline-block(middle);
-	max-height:rem(40px);
-	max-width: rem(60px);
+	height:rem(40px);
+	width: rem(60px);
 	margin-right: rem(20px);
 }
 .logo__title {
-	@include inline-block(middle);
 	text-transform: uppercase;
 	white-space: nowrap;
 	@include font-family(bold);
@@ -36,8 +35,11 @@
 .nav {
 
 }
+.nav__list {
+	display: flex;
+	align-items: center;
+}
 .nav__item {
-	@include inline-block(middle);
 	&.active {
 		a {
 			color: $accent;
@@ -54,7 +56,7 @@
 	}
 }
 .btn__login {
-	display: inline-block;
+	text-align: center;
 	padding: rem(15px) rem(30px);
 	border: 1px solid $accent;
 	@extend %small-link;
@@ -65,16 +67,34 @@
 	}
 }
 //-_-_-_-_-_-_-_-_-_-_-_-_-/header-mid/_-_-_-_-_-_-_-_-_-_-_-_-//
-	.header-mid {
-		text-align: center;
+.header-mid {
+	padding: rem(100px) 0 rem(130px) 0;
+	text-align: center;
+}
+.header-mid__title {
+	@include font-family(robthin);
+	font-size: rem(40px);
+	line-height: 1;
+	margin-bottom: rem(25px);
+}
+.header-mid__desc {
+	font-size: rem(16px);
+	max-width: rem(500px);
+	display: inline-block;
+	margin-bottom: rem(40px);
+}
+.header__wrap-btn {
+	margin-bottom: rem(25px);
+}
+.header-mid__link {
+	@include font-family();
+	font-size: 12px;
+	font-weight: 400;
+	text-decoration: underline;
+	text-transform: uppercase;
+	letter-spacing: rem(1px);
+	@extend %transition;
+	&:hover {
+		text-decoration: none;
 	}
-	.header-mid__title {
-		@include font-family(robthin);
-		font-size: rem(40px);
-		line-height: 1;
-	}
-	.header-mid__desc {
-		font-size: rem(16px);
-		max-width: rem(500px);
-		display: inline-block;
-	}
+}

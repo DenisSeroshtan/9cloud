@@ -8,13 +8,17 @@ module.exports = {
     style: './source/style/**/*.scss',
     js: './source/js/**/*.js',
     img: './source/img/**/*.*',
-    fonts: './source/fonts/**/*.*'
+    fonts: './source/fonts/**/*.*',
+    svgIcon: './source/svg/icon/**/*.svg',
+    svgImg: './source/svg/img/**/*.svg'
   },
   dist: {
     css: '/assets/css',
     js: '/assets/js',
     img: '/assets/img',
-    fonts: '/assets/fonts'
+    fonts: '/assets/fonts',
+    svgIcon: '/assets/svg/icon',
+    svgImg: '/assets/svg/img'
   },
   autoprefixerConfig: ['last 15 version']
 };
