@@ -14,4 +14,5 @@ $(function () {
     search: true,
     searchText: 'Search'
   });
+
 });
