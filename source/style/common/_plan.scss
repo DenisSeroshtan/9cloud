@@ -1,0 +1,90 @@
+$border_color: #7d7d7d;
+.section.plan {
+	background: #fff;
+	padding: rem(60px) 0;
+}
+.plan__list {
+	@include row-flex;
+	justify-content: center;
+	text-align: center;
+}
+.plan__item {
+	@include col-padding;
+	box-sizing: content-box;
+	@include size(3);
+	border: 1px solid $border_color;
+	background: #fff;
+	padding: $offset $offset rem(15px);
+	&.active {
+		background: $grey;
+		border: none;
+		@include col;
+		@include size(4);
+		margin: 0;
+		padding: 0;
+		color: #fff;
+		.plan__header-title {
+			color: inherit;
+		}
+		.plan__header {
+			background: $accent;
+			padding-top: $offset;
+			border-bottom: none;
+		}
+		.plan__header-text {
+			color: inherit;
+		}
+		.plan__item-price {
+			color: inherit;
+		}
+		.include__item {
+			color: inherit;
+			b {
+				color: inherit;
+			}
+		}
+		.btn_full {
+			width: 75%;
+		}
+	}
+}
+.plan__header {
+	padding-bottom: rem(15px);
+	border-bottom: 1px solid $border_color;
+}
+.plan__header-title {
+	color: $grey;
+}
+.plan__item-price {
+	margin-top: rem(30px);
+	@include font-family(robbold);
+	font-size: rem(50px);
+	line-height: rem(20px);
+	color: #000;
+	sup {
+		font-size: 20px;
+		vertical-align: super;
+	}
+	span {
+		font-size: 12px;
+	}
+}
+.include__list {
+	margin: rem(30px) 0;
+}
+.include__item {
+	margin-bottom: rem(15px);
+	&:last-child {
+		margin-bottom: 0;
+	}
+	color: #5e5e5e;
+	font-size: rem(14px);
+	b {
+		color: #000;
+	}
+}
+.btn_full {
+	padding-left: 0;
+	padding-right: 0;
+	width: 100%;
+}

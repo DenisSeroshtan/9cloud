@@ -3,6 +3,10 @@
 	color: #000;
 	font-size: rem(14px);
 }
+.debug {
+	@include debug(rgba(#123df3, .2), #ccc);
+	z-index: 10;
+}
 //style
 html{
 	@include reset; //reset style of smartgrid
@@ -95,6 +99,7 @@ h6 {
 	text-transform: uppercase;
 	white-space: nowrap;
 	color: $white;
+	transition: all .25s linear;
 	&:hover {
 		background: #e12c1b;
 	}

@@ -1,0 +1,21 @@
+section.section.plan
+	.container
+		.domain__row
+			.domain__col
+				h2.domain__title Pick your plan
+				.domain__desc
+					p Upgrade, downgrade or cancel anytime.
+		.plan__list
+			each object, key in plan
+				li(class="plan__item " + ((key == 'business') ? "active" : ""))
+					.plan__header
+						.benefits__item-title.plan__header-title= key
+						.domain__item-text.plan__header-text= object.title
+					.plan__item-price !{object.price}
+					ul.include__list
+						-for(let i in object.include)
+							li.include__item !{object.include[i]}
+					-if (key == "business")
+						+Btn('order now', "btn btn_full")
+					-else
+						+Btn('order now', 'btn_grey btn_full')
