@@ -17,6 +17,7 @@
 	@include font-family(roblight);
 	font-size: rem(40px);
 	margin-bottom: rem(15px);
+	text-align: center;
 }
 .domain__desc {
 	font-size: 1rem;
@@ -77,7 +78,6 @@
 	}
 	@include xs-block {
 		@include shift(1);
-
 	}
 
 

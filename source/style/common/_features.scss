@@ -1,0 +1,45 @@
+.section.features {
+	background: $grey;
+	padding: rem(60px) 0 rem(30px);
+}
+.domian__title_white {
+	color: #fff;
+	margin-bottom: rem(40px);
+}
+.domain__item {
+	&.features__mod{
+		margin-bottom: rem(70px);
+		padding-right: rem(40px);
+		@include size-lg(5);
+		@include size-md(4);
+		@include size-sm(8);
+		@include md-block {
+			@include shift(1);
+			margin-bottom: rem(70px);
+			padding-right: 0;
+		}
+		@include sm-block {
+			@include shift(2);
+			&:last-child {
+				margin-bottom: 0;
+			}
+			@include xs-block {
+				@include shift-left(2);
+			}
+		}
+		.domains__item-icon{
+			fill: $accent;
+		}
+
+		.domain__item-title {
+			color: #fff;
+			font-size: 16px;
+		}
+
+		.domain__item-text {
+			color: #98a3a3;
+			font-size: 14px;
+		}
+
+	}
+}

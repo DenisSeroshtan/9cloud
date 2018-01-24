@@ -16,11 +16,5 @@ section.section.domain#js-domain
 						option .net
 						option .biz
 					button.btn.domain__btn find domain
-		ul.domain__list
-			each obj, key in domain.list
-				li.domain__item
-					+svg("domains__item-icon", key)
-					.domain__item-title= obj.title
-					.domain__item-text
-						p= obj.text
+		+features(domain.list)
 

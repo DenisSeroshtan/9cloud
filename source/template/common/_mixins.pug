@@ -2,6 +2,15 @@ mixin preloader
 	.preloader
 		.pulse
 
+mixin features(object, mod = '')
+	ul(class=`domain__list ${mod}`)
+		each obj, key in object
+			li(class=`domain__item ${mod}`)
+				+svg("domains__item-icon", key)
+				.domain__item-title= obj.title
+				.domain__item-text
+					p= obj.text
+
 mixin headerTop(mod="")
 	.container
 		div(class='header-top '+mod)

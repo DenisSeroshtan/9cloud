@@ -22,6 +22,34 @@
       }
     }
   },
+  "features" : {
+    "list": {
+      "heart" : {
+        "title" : "made with love",
+        "text" : "Curabitur imperdiet enim id faucibus sollicitudin."
+      },
+      "database" : {
+        "title" : "databases",
+        "text" : "Curabitur imperdiet enim id faucibus sollicitudin. "
+      },
+      "vps" : {
+        "title" : "vps server",
+        "text" : "Phasellus aliquam arcu quis lectus aliquam, sed dignissim ligula efficitur. "
+      },
+      "lock" : {
+        "title" : "fully secured",
+        "text" : "Phasellus aliquam arcu quis lectus aliquam efficitur. "
+      },
+      "daily" : {
+        "title" : "daily backups",
+        "text" : "Aliquam nisl lectus, rhoncus nec ex vestibulum. "
+      },
+      "cloud" : {
+        "title" : "cloud hosted",
+        "text" : "Etiam sagittis tellus at lacus cursus, non molestie nulla."
+      }
+    }
+  },
   "benefits" : {
     "shell": {
       "title": "99,9% uptime guarantee",
