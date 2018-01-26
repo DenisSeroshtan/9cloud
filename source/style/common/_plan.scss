@@ -1,25 +1,55 @@
 $border_color: #7d7d7d;
+
 .section.plan {
 	background: #fff;
 	padding: rem(60px) 0;
 }
+
 .plan__list {
 	@include row-flex;
 	justify-content: center;
 	text-align: center;
 }
+
 .plan__item {
 	@include col-padding;
 	box-sizing: content-box;
 	@include size(3);
+	@include size-lg(7);
+	@include size-sm(9);
+	@include size-xs(10);
+
+	@include lg-block {
+		@include col;
+		box-sizing: border-box;
+		.btn_full {
+			max-width: rem(300px);
+		}
+	}
+	@include md-block {
+		.btn_full {
+			max-width: rem(250px);
+		}
+	}
+
 	border: 1px solid $border_color;
 	background: #fff;
 	padding: $offset $offset rem(15px);
+
 	&.active {
-		background: $grey;
-		border: none;
 		@include col;
 		@include size(4);
+		@include size-lg(7);
+		@include size-sm(9);
+
+		@include size-xs(10);
+		@include lg-block {
+			order: -1;
+			padding-bottom: rem(15px);
+		}
+
+		background: $grey;
+		border: none;
 		margin: 0;
 		padding: 0;
 		color: #fff;
@@ -45,6 +75,9 @@ $border_color: #7d7d7d;
 		}
 		.btn_full {
 			width: 75%;
+			@include lg-block {
+				//width: 100%;
+			}
 		}
 	}
 }
@@ -88,3 +121,23 @@ $border_color: #7d7d7d;
 	padding-right: 0;
 	width: 100%;
 }
+//-_-_-_-_-_-_-_-_-_-_-_-_-/plan__bottom/_-_-_-_-_-_-_-_-_-_-_-_-//
+
+.plan__bottom {
+	margin-top: rem(50px);
+	text-align: center;
+}
+.plan__desc {
+	display: inline-block;
+	max-width: rem(340px);
+	margin-bottom: 0;
+}
+.plan__desc-link {
+	color: $accent;
+	@extend %transition;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+

@@ -1,12 +1,14 @@
 section.section.plan
 	.container
+
 		.domain__row
 			.domain__col
 				h2.domain__title Pick your plan
 				.domain__desc
 					p Upgrade, downgrade or cancel anytime.
+
 		.plan__list
-			each object, key in plan
+			each object, key in plan.items
 				li(class="plan__item " + ((key == 'business') ? "active" : ""))
 					.plan__header
 						.benefits__item-title.plan__header-title= key
@@ -19,3 +21,7 @@ section.section.plan
 						+Btn('order now', "btn btn_full")
 					-else
 						+Btn('order now', 'btn_grey btn_full')
+
+		.plan__bottom
+			.plan__desc.domain__desc= plan.help.text
+				a(href="#" class="plan__desc-link")= plan.help.link

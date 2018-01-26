@@ -68,23 +68,30 @@
     }
   },
   "plan" : {
-    "personal" : {
-      "title" : "Perfect Pack for Small Business",
-      "price" : "<sup>$</sup>25<span>/MO</span>",
-      "include" : ["<b>3 Gb</b> of storage","<b>10</b> repositories", "<b>10</b> parked domains" ,"<b>25 FTP</b> accounts" ]
+    "items" : {
+      "personal" : {
+        "title" : "Perfect Pack for Small Business",
+        "price" : "<sup>$</sup>25<span>/MO</span>",
+        "include" : ["<b>3 Gb</b> of storage","<b>10</b> repositories", "<b>10</b> parked domains" ,"<b>25 FTP</b> accounts" ]
 
+      },
+      "business" : {
+        "title" : "Perfect Pack for Small Business",
+        "price" : "<sup>$</sup>45<span>/ MO</span>",
+        "include" : ["<b>3 Gb</b> of storage","<b>10</b> repositories", "<b>10</b> parked domains" ,"<b>25 FTP</b> accounts" ]
+
+      },
+      "corporation" : {
+        "title" : "Perfect Pack for Small Business",
+        "price" : "<sup>$</sup>65<span>/MO</span>",
+        "include" : ["<b>3 Gb</b> of storage","<b>10</b> repositories", "<b>10</b> parked domains" ,"<b>25 FTP</b> accounts" ]
+
+      }
     },
-    "business" : {
-      "title" : "Perfect Pack for Small Business",
-      "price" : "<sup>$</sup>45<span>/ MO</span>",
-      "include" : ["<b>3 Gb</b> of storage","<b>10</b> repositories", "<b>10</b> parked domains" ,"<b>25 FTP</b> accounts" ]
-
-    },
-    "corporation" : {
-      "title" : "Perfect Pack for Small Business",
-      "price" : "<sup>$</sup>65<span>/MO</span>",
-      "include" : ["<b>3 Gb</b> of storage","<b>10</b> repositories", "<b>10</b> parked domains" ,"<b>25 FTP</b> accounts" ]
-
+    "help": {
+      "text" : "If you need help finding a plan that’s right for you,",
+      "link" : " just chat with a live person."
     }
+
   }
 }
