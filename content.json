@@ -93,5 +93,12 @@
       "link" : " just chat with a live person."
     }
 
+  },
+  "testimonials" : {
+    "slider" : {
+      "text" : "The best and most reliable VPS account I have experienced from happy-hosting. I have never expected to have such a reliable host. Thanks to them very much for their unparalleled services with excellent administration.",
+      "img" : "background-image:url('assets/img/testimonials/man.png')",
+      "name" : "Oscar Wild,  Pragmatic Solutions"
+    }
   }
 }

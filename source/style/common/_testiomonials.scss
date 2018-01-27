@@ -1,0 +1,68 @@
+.section.testimonials {
+	padding: rem(40px) 0;
+	background: #fff;
+	.domain__title {
+		margin-bottom: rem(5px);
+	}
+	.domain__desc {
+		margin-bottom: rem(5px);
+	}
+}
+
+.slider__wrap {
+	@include row-flex;
+	justify-content: center;
+	text-align: center;
+	position: relative;
+	padding-top: rem(90px);
+	@include icon-pseudo($icon-quote-left){
+		position: absolute;
+		top: rem(40px);
+		color: #4c4c4c;
+		font-size: rem(24px);
+
+	}
+}
+.slider__list {
+	@include col;
+	@include size(10);
+}
+.slider__item-text {
+	color: #000;
+	font-size: 1rem;
+	margin-bottom: rem(20px);
+}
+.slider__pic-img {
+	display: inline-block;
+	width:rem(80px);
+	height:rem(80px);
+	border-radius: 50%;
+	@include cover;
+	margin-bottom: rem(20px);
+}
+.slider__item-name {
+	@include font(12px, #5e5e5e);
+}
+//-_-_-_-_-_-_-_-_-_-_-_-_-/slick slider /_-_-_-_-_-_-_-_-_-_-_-_-//
+.slider__dots {
+	margin-top: rem(55px);
+	li {
+		display: inline-block;
+		width: rem(7px);
+		height: rem(7px);
+		box-sizing: content-box;
+		border: rem(3px) solid #e5e5e5;
+		background: #e5e5e5;
+		border-radius: 50%;
+		margin-right: rem(20px);
+		&:last-child {
+			margin-right: 0;
+		}
+		&.slick-active{
+			background: $grey;
+		}
+		button {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+section.section.testimonials#js-testimonials
+	.container
+
+		.domain__row
+			.domain__col
+				h2.domain__title Testimonials
+				.domain__desc
+					p Couple of words about this section
+
+		.slider__wrap
+			.slider__list
+				-for (let i=0; i<3; i++)
+					.slider__item
+						.slider__item-text
+							p= testimonials.slider.text
+						.slider__pic-wrap
+							div(style=testimonials.slider.img).slider__pic-img
+						.slider__item-name= testimonials.slider.name
+
+
