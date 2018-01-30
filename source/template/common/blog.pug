@@ -1,0 +1,21 @@
+section.section.blog
+	.container
+		h2.domain__title.blog__title Company Blog
+
+		each obj in blog
+			article.article__post
+				.post__left
+					.post-title= obj.title
+					.post-info
+						time.post-time= obj.time
+						.js-firstWord.post-comments= obj.comments
+						.post-like= obj.like
+					.post-content
+						p
+							span.js-content__show= obj.text
+							span.js-content__hide.hidden= obj.text_hide
+							a(href="#" class="post-link__hide ") Read more
+				.post__right
+					img(src=`assets/img/blog/${obj.img}`
+						alt="pic"
+						class="post-img")

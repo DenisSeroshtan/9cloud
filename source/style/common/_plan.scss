@@ -21,7 +21,13 @@ $border_color: #7d7d7d;
 
 	@include lg-block {
 		@include col;
+
 		box-sizing: border-box;
+		margin-bottom:rem(10px);
+		&:last-child {
+			margin-bottom: 0;
+		}
+
 		.btn_full {
 			max-width: rem(300px);
 		}
@@ -46,6 +52,8 @@ $border_color: #7d7d7d;
 		@include lg-block {
 			order: -1;
 			padding-bottom: rem(15px);
+			margin: 0 0 rem(10px) 0;
+
 		}
 
 		background: $grey;
@@ -53,6 +61,7 @@ $border_color: #7d7d7d;
 		margin: 0;
 		padding: 0;
 		color: #fff;
+
 		.plan__header-title {
 			color: inherit;
 		}

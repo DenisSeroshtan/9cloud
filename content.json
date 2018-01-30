@@ -100,5 +100,34 @@
       "img" : "background-image:url('assets/img/testimonials/man.png')",
       "name" : "Oscar Wild,  Pragmatic Solutions"
     }
-  }
+  },
+  "blog" : [
+    {
+      "title" : "How does the Internet Create Potential",
+      "time" : "25 november, 2017",
+      "comments" : "6 comments",
+      "like" : 23,
+      "text" : "Etiam tempor vehicula dui, sit amet accumsan nisi vehicula ac. Fusce finibus lacus lobortis, imperdiet justo et, placerat sapien. Nullam velit turpis, suscipit vitae commodo. Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+      "text_hide" : " Quod error fugiat cum minima natus molestias, harum impedit asperiores, dignissimos, explicabo, sapiente. Sequi, veniam dolores. Ipsam earum esse veniam, atque tempora.",
+      "img" : "img1.png"
+    },
+    {
+      "title" : "How does the Internet Create Potential",
+      "time" : "06 January, 2018",
+      "comments" : "3 comments",
+      "like" : 12,
+      "text" : "Etiam tempor vehicula dui, sit amet accumsan nisi vehicula ac. Fusce finibus lacus lobortis, imperdiet justo et, placerat sapien. Nullam velit turpis, suscipit vitae commodo. Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+      "text_hide" : " Quod error fugiat cum minima natus molestias, harum impedit asperiores, dignissimos, explicabo, sapiente. Sequi, veniam dolores. Ipsam earum esse veniam, atque tempora.",
+      "img" : "img2.png"
+    },
+    {
+      "title" : "How does the Internet Create Potential",
+      "time" : "25 January, 2018",
+      "comments" : "11 comments",
+      "like" : 9,
+      "text" : "Etiam tempor vehicula dui, sit amet accumsan nisi vehicula ac. Fusce finibus lacus lobortis, imperdiet justo et, placerat sapien. Nullam velit turpis, suscipit vitae commodo. Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+      "text_hide" : " Quod error fugiat cum minima natus molestias, harum impedit asperiores, dignissimos, explicabo, sapiente. Sequi, veniam dolores. Ipsam earum esse veniam, atque tempora.",
+      "img" : "img3.png"
+    }
+  ]
 }

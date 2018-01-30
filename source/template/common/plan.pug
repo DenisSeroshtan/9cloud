@@ -18,6 +18,7 @@ section.section.plan
 						-for(let i in object.include)
 							li.include__item !{object.include[i]}
 					-if (key == "business")
+
 						+Btn('order now', "btn btn_full")
 					-else
 						+Btn('order now', 'btn_grey btn_full')
