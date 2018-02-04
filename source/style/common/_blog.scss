@@ -1,5 +1,6 @@
 .section.blog{
 	background: #fff;
+	padding: rem(40px) 0;
 }
 .article__post {
 	@include row-flex;

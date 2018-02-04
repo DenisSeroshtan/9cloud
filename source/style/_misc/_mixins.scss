@@ -12,7 +12,7 @@
 	@return $px/16px+0rem;
 }
 
-@mixin font($size:16px, $color:#333){
+@mixin font($size:16px, $color:inherit){
 	font-size: rem($size);
 	color: $color;
 }

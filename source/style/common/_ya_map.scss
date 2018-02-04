@@ -1,0 +1,134 @@
+.section.ya_map{
+}
+.ymap-container {
+	width: 100%;
+	height: rem(550px);
+
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+
+	@include bg-cover('../img/map.jpg');
+
+
+}
+//-_-_-_-_-_-_-_-_-_-_-_-_-/contacts/_-_-_-_-_-_-_-_-_-_-_-_-//
+
+.map-contacts {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 0;
+
+	color: #000;
+}
+
+.contacts__title {
+	@include font-family(roblight);
+	@include font(30px);
+
+	max-width: rem(330px);
+
+	margin-bottom: rem(40px);
+}
+
+.contacts__address {
+	max-width: rem(210px);
+	margin-bottom: rem(40px);
+
+	font-size: rem(18px);
+
+}
+.contacts__work {
+	margin-right: rem(120px);
+	font-size: rem(12px);
+
+	@include lg-block {
+		margin-right: 0;
+	}
+}
+.contacts__mail {
+	font-size: 1rem;
+
+	@include lg-block {
+		display: block;
+	}
+}
+.contacts__phone {
+	font-size: 1rem;
+}
+
+.map {
+	width: 100%;
+	min-height: rem(550px);
+	position: relative;
+	z-index: 7;
+
+	cursor: pointer;
+
+	background-color: transparent;
+}
+//-_-_-_-_-_-_-_-_-_-_-_-_-/preloader yandex maps/_-_-_-_-_-_-_-_-_-_-_-_-//
+.loader {
+	position: absolute;
+	z-index: 15;
+	top: -100%;
+	left: 0;
+
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+
+	overflow: hidden;
+
+	color: #000000;
+
+	transition: opacity .7s ease;
+
+	opacity: 0;
+	background-color: rgba(0,0,0,.55);
+}
+.loader:after,
+.loader:before {
+	box-sizing: border-box;
+}
+.loader.is-active {
+	top: 0;
+	opacity: 1;
+}
+
+.loader-default:after {
+	position: absolute;
+	top: calc(50% - 24px);
+	left: calc(50% - 24px);
+
+	width: 48px;
+	height: 48px;
+
+	content: '';
+	animation: rotation 1s linear infinite;
+
+	border: solid 8px #ffffff;
+	border-left-color: transparent;
+	border-radius: 50%;
+}
+
+@keyframes rotation {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+
+@keyframes blink {
+	from {
+		opacity: .5;
+	}
+	to {
+		opacity: 1;
+	}
+}
+

@@ -57,6 +57,10 @@ section {
 .container{
 	@include wrapper;
 }
+.text-center {
+	width: 100%;
+	text-align: center;
+}
 
 li {
 	list-style: none;
@@ -95,7 +99,7 @@ h6 {
 .btn {
 	display: inline-block;
 	background: $accent;
-	padding: rem(20px) rem(65px);
+	padding: rem(15px) rem(65px);
 	text-transform: uppercase;
 	white-space: nowrap;
 	color: $white;

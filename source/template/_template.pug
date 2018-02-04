@@ -20,23 +20,26 @@ html
 		meta(name="msapplication-navbutton-color" content= colorBrowser)
 		//- iOS Safari
 		meta(name="apple-mobile-web-app-status-bar-style" content= colorBrowser)
+		// css style
+		link(rel='stylesheet' href='assets/css/foundation.css')
+		link(rel='stylesheet' href='assets/css/app.css')
+		//-script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+
 
 
 
 	body
-		//+debug
+		//-+debug
 		.wrapper
 
-			//+preloader
-			//a(href="#js-header").top
+			//-+preloader
+			//-a(href="#js-header").top
 			//-_-_-_-_-_-_-_-_-_-_-_-_-/content/_-_-_-_-_-_-_-_-_-_-_-_-//
 			block content
-		//-_-_-_-_-_-_-_-_-_-_-_-_-/style and scripts/_-_-_-_-_-_-_-_-_-_-_-_-//
 
-		link(rel='stylesheet' href='assets/css/foundation.css')
-		link(rel='stylesheet' href='assets/css/app.css')
+		//-_-_-_-_-_-_-_-_-_-_-_-_-/scripts/_-_-_-_-_-_-_-_-_-_-_-_-//
 		script(src='assets/js/svg4everybody.min.js')
 		script(src='assets/js/foundation.js')
-		script(src='assets/js/app.js')
 		script svg4everybody();
-
+		//-_-_-_-_-_-_-_-_-_-_-_-_-/custom script/_-_-_-_-_-_-_-_-_-_-_-_-//
+		script(src='assets/js/app.js')

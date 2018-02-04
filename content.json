@@ -129,5 +129,12 @@
       "text_hide" : " Quod error fugiat cum minima natus molestias, harum impedit asperiores, dignissimos, explicabo, sapiente. Sequi, veniam dolores. Ipsam earum esse veniam, atque tempora.",
       "img" : "img3.png"
     }
-  ]
+  ],
+  "map" : {
+    "title" : "We are interested in long-term cooperation",
+    "address" : "100 William Street New York, New York 10038",
+    "work" : "Mon – Fri , 8 am – 5 pm",
+    "phone": "800-638-9996, 518-292-4500",
+    "mail" : "info@somecompany.com"
+  }
 }
