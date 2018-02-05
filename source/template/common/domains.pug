@@ -10,11 +10,12 @@ section.section.domain#js-domain
 
 					input(name="search_domain"
 						type="text"
-						placeholder="http://").domain__input
+						placeholder= ph[0]).domain__input
 					select(name="select_domain_name").domain__select#js-select
 						option .com
 						option .net
 						option .biz
 					button.btn.domain__btn find domain
+
 		+features(domain.list)
 

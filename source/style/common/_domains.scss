@@ -11,6 +11,10 @@
 	@include size(8);
 	@include size-lg(10);
 	@include size-md(12);
+	@include md-block {
+		@include col;
+		padding: 0;
+	}
 	text-align: center;
 }
 .domain__title {

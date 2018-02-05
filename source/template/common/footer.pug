@@ -1,0 +1,41 @@
+footer.footer
+	.footer-top
+		.container
+			.footer-top__row
+				.socials
+					.socials__title Follow us on
+					ul.social__list
+						each social in socials
+							li.social__item
+								a(href="#" class="social__link")
+									+svg("socials__svg", social)
+				.subscribe
+					.subscribe__title subscribe
+					form.subscribe__form
+						input(name="email"
+						type="text"
+						placeholder= ph[1]).subscribe__input
+						button.btn.btn_subscribe send
+
+	.footer-bottom
+		.container
+			.footer-row
+				each obj, key in footer
+					.footer-block
+						.domain__item-title.footer-block__title= key
+						ul.footer-block__list
+							each item in obj
+								li.footer-block__item
+									a(href="#"
+									class="slider__item-name footer-block__link")= item
+
+				.footer-contacts
+					.contacts__block
+						.footer-contacts__phone= contacts.phone
+						.contacts__mail
+							a(href="#" class="link__red contacts__mail-link")= contacts.mail
+					.copyright.slider__item-name= contacts.copyright
+
+
+
+

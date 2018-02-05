@@ -136,5 +136,19 @@
     "work" : "Mon – Fri , 8 am – 5 pm",
     "phone": "800-638-9996, 518-292-4500",
     "mail" : "info@somecompany.com"
+  },
+  "socials" : ["tw", "fb", "link", "inst"],
+  "ph" : ["http://", "Enter your e-mail here"],
+
+  "footer" : {
+    "solution" : ["Web Solution Overview", "Email Marketing", "Website Promotion", "eCommerce Website"],
+    "services" : ["Shared Hosting", "Reseller Hosting", "Cloud Manager VPS", "Dedicated Servers"],
+    "support" : ["Knowledge Base", "Support Request", "Client Area"],
+    "legal terms" : ["Terms of Use", "Privacy Policy"]
+  },
+  "contacts" : {
+    "phone" : "(044) 383 4389",
+    "mail" : "support@cloudhost.com",
+    "copyright" : "Copyright © 2017 Cloud Host.All rights reserved."
   }
 }
