@@ -1,7 +1,5 @@
 //preloader
-window.onload = function() {
-  document.querySelector('.wrapper').classList.add('loaded');
-};
+
 $(function () {
   $('.js-lastWord').each(function() {
     var $this = $(this);
@@ -55,6 +53,49 @@ $(function () {
     }
   })
 
+})();
+
+(function () {
+
+  $('a[href^="#js"]').on('click', function(e) {
+      e.preventDefault();
+
+      var
+          $this = $(this),
+          target = $this.attr('href'),
+          hTarget = $(target).offset().top,
+          duration = 1500;
+
+      $('html,body').animate({
+          scrollTop : hTarget
+      }, duration)
+
+  });
+
+})();
+
+(function() {
+  // fixed menu to scroll
+  var
+      header = $('.header'),
+      hHeader = header.outerHeight(),
+      nav = $('.header-top'),
+      hNav = nav.outerHeight();
+
+  $(document).on('scroll', function(e) {
+    var
+        $this = $(this),
+        hScroll = $this.scrollTop();
+
+    if(hScroll > hHeader) {
+      nav.addClass('fixed');
+      header.css("paddingTop", hNav);
+    }else {
+      nav.removeClass('fixed');
+      header.removeAttr('style');
+    }
+
+  });
 })();
 
 
