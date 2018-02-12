@@ -1,5 +1,5 @@
 //-_-_-_-_-_-_-_-_-_-_-_-_-/header/_-_-_-_-_-_-_-_-_-_-_-_-//
-header.header
+header.header#js-hosting
 	.header-top__wrap
 		.container
 			.header-top
@@ -8,7 +8,8 @@ header.header
 						img(src="assets/img/logo.svg"
 							alt="logo" class="logo__img")
 					.logo__title.js-lastWord nine cloud hosting
-				nav.nav
+				+hamburger("nav_header")
+				nav.nav#nav_header
 					ul.nav__list
 						-for (let i = 0; i<nav.length; i++)
 							li(class="nav__item "+((i == 0) ? "active" : ""))

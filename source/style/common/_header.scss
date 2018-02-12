@@ -7,22 +7,35 @@
 .header-top__wrap {
 	width: 100%;
 	border-bottom: 1px solid #424348;
-}
-.header-top {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	padding: rem(30px) 0;
-
+	position: relative;
 	&.fixed {
 		position: fixed;
 		top: 0;
 		left: 0;
 		right: 0;
 		padding: rem(10px) rem(20px);
-		z-index: 10;
+		z-index: 100;
 		background: $grey;
+		.btn__login {
+			@include lg-block {
+				display: none;
+			}
+		}
+		.hamburger {
+			margin: 0 0 0 auto;
+		}
 	}
+}
+.header-top {
+	display: flex;
+	//position: relative;
+	justify-content: space-between;
+	align-items: center;
+	@include lg-block {
+		justify-content: inherit;
+	}
+
 }
 .logo__container {
 	display: flex;
@@ -34,6 +47,9 @@
 	margin-right: rem(20px);
 }
 .logo__title {
+	@include sm-block {
+		display: none;
+	}
 	text-transform: uppercase;
 	white-space: nowrap;
 	@include font-family(bold);
@@ -42,12 +58,46 @@
 		color: $accent;
 	}
 }
-.nav {
+//-_-_-_-_-_-_-_-_-_-_-_-_-/hamburger/_-_-_-_-_-_-_-_-_-_-_-_-//
 
+.hamburger {
+	display: none;
+	@include lg-block {
+		display: inline-block;
+		order: 1;
+	}
+
+}
+//-_-_-_-_-_-_-_-_-_-_-_-_-/nav/_-_-_-_-_-_-_-_-_-_-_-_-//
+
+.nav {
+	@include lg-block {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+	}
 }
 .nav__list {
 	display: flex;
 	align-items: center;
+	@include lg-block {
+		display: block;
+		background: $grey;
+		.nav__item {
+			text-align: center;
+			border-bottom: 1px solid darken($grey, 2%);
+
+		}
+		.nav__item-link {
+			display: block;
+			transition: background .25s ease;
+			&:hover {
+				background: lighten($grey, 10%);
+			}
+		}
+	}
 }
 .nav__item {
 	&.active {
@@ -71,6 +121,11 @@
 	border: 1px solid $accent;
 	@extend %small-link;
 	@extend %transition;
+
+	@include lg-block{
+		margin: 0 0 0 auto;
+	}
+
 
 	&:hover {
 		background: $accent;
